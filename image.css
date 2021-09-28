@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #262626;
+}
+.container{
+    position: absolute;
+    display: flex;
+    -webkit-box-reflect: below 1px 
+    linear-gradient(transparent,transparent,transparent,#0004);
+}
+
+.container .box{
+    position: relative;
+    width: 320px;
+    height: 400px;
+    margin: 0 43px;
+    border-radius: 20px;
+    background: linear-gradient(
+    45deg, #f035f7 25%,#4444 25%, 
+    #4444 50%, #f035f7 50%,
+    #f035f7 75%,#4444 75%, #4444 100%);
+    background-size: 40px 40px;
+    filter: grayscale(1);
+    animation: animateBg 0.5s linear infinite;
+    animation-play-state: paused;
+    transition: filter 1s;
+    display: flex;
+    justify-content: center;
+}
+.container .box1{
+    width: 500px;
+}
+.container .box .img1{
+    /* width: 690px; */
+    justify-content: left;
+
+}
+/* .container .box:nth-child(2){
+    background: linear-gradient(
+    135deg, #2da2ff 25%,
+    #4444 25%, #4444 50%, #2da2ff 50%,
+     #2da2ff 75%,
+    #4444 75%, #4444 100%);
+    background-size: 40px 40px;
+} */
+.container .box:nth-child(2){
+    background: linear-gradient(
+    45deg, #f2ff3f 25%,
+    #4444 25%, #4444 50%, #f2ff3f 50%,
+     #f2ff3f 75%,
+    #4444 75%, #4444 100%);
+    background-size: 40px 40px;
+}
+.container .box:hover{
+    animation-play-state: running;
+    filter:grayscale(0);
+}
+@keyframes animateBg{
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 40px;
+    }
+}
+.container .box img{
+    position: absolute;
+    bottom: 0;
+    height: 90%;
+    transition: height 0.5s;
+
+}
+.container .box:hover img{
+    height: 480px;
+}
